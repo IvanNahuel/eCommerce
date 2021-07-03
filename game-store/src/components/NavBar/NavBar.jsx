@@ -1,4 +1,5 @@
 import React from "react";  //esto nos permite que funcione nuestra app
+import CartWidgets from '../CartWidgets/CartWidgets';
 
 //definimos nuestro componente, como una funcion
 const NavBar = (props) =>{
@@ -11,6 +12,7 @@ const NavBar = (props) =>{
                     <div>Productos</div>
                     <div>Contactos</div>
                     <div>Mi Carrito</div>
+                    <CartWidgets/>
             </section>
         </nav>
     );

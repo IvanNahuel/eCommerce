@@ -3,8 +3,6 @@ import CartWidgets from '../CartWidgets/CartWidgets';
 
 //definimos nuestro componente, como una funcion
 const NavBar = (props) =>{
-    console.log(props);
-
     return (
         <nav className="nav-bar">
             <h1>{props.nombreDeLaTienda}</h1>

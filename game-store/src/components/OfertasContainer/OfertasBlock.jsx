@@ -20,8 +20,6 @@ const OfertasBlock = () =>{
     
     let listaJuegos = [juego1, juego2, juego3, juego4, juego5];
 
-    //const [st_lista_juego, set]
-
     console.log(listaJuegos);
 
     return (

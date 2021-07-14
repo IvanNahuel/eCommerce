@@ -1,11 +1,7 @@
-import { element, func } from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import ItemContainer from '../itemListContainer/ItemListContainer';
 
 const OfertasBlock = () =>{
-
-    const [listaJuegos,setListaJuegos] = useState([]);
-    const [flagCargaSv, setFlagCargaSV] = useState(0);
 
     let juego = {
         juegos:[
@@ -42,43 +38,34 @@ const OfertasBlock = () =>{
         ]
     };
 
+    const [listaJuegos,setListaJuegos] = useState(juego);
+
     //simulando una carga de datos del servidor
+    /*
     const obtenerJuegosDelServidor = () =>{
         setTimeout(()=>{
-            setListaJuegos(juego);
+            setListaJuegos();
             console.log(listaJuegos.length)
         },2000);
     }
-
-    useEffect(()=>{
-            if (flagCargaSv==0){
-                obtenerJuegosDelServidor();
-                setFlagCargaSV(1);
-            }        
-        } 
-    );
+    */
 
     return (
         <>
             <h1>Ofertas de la semana</h1>
             <section className="ofertas-block">
-                {
-                console.log(listaJuegos.length)
-                }
-                {
-                    listaJuegos.length > 0 ? ()=>{
-                        //console.log("verdadero")
-                        listaJuegos.map(element =>{
-                            <ItemContainer juego={element}/>
-                        })
-                    }:console.log("false")
+                {console.log(listaJuegos.juegos)}
+                {listaJuegos.juegos.length >0 ? listaJuegos.juegos.map(function(element){
+                        console.log(element);
+                        <ItemContainer juego={element}/>
+                    }): console.log("falso")
                 }
                 {/*
-                <ItemContainer juego={juego1}/>
-                <ItemContainer juego={juego2}/>
-                <ItemContainer juego={juego3}/>
-                <ItemContainer juego={juego4}/>
-                <ItemContainer juego={juego5}/>
+                <ItemContainer juego={juego.juegos[0]}/>
+                <ItemContainer juego={juego.juegos[0]}/>
+                <ItemContainer juego={juego.juegos[0]}/>
+                <ItemContainer juego={juego.juegos[0]}/>
+                <ItemContainer juego={juego.juegos[0]}/>
                 */}
                 
             </section>

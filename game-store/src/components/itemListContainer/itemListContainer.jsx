@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 
 const ItemContainer = (juego) =>{
-    //TO DO: hasta ahora no modifico el pseudo stock que simulo recibir por parametro de la funcion
-    //podria hacer un metodo que settee modificar el stock 
-    console.log("entroo en item list container");
-    console.log(juego);
-
     const [contador, SetTotal] = useState(0);
 
     const Aumentar = () =>{

@@ -32,27 +32,20 @@ const OfertasBlock = () =>{
     }
 
     useEffect(()=>{
-            //console.log("useEffect")
             if (flagCargaSv==0){
-                //console.log("entro por primera vez y setteo eso");
                 obtenerJuegosDelServidor();
                 setFlagCargaSV(1);
             }        
         } 
     );
 
-    //console.log(listaJuegos);
-
-    //{listaJuegos.length >0 ? listaJuegos.map(element => <ItemContainer juego={element}/>):false}
-
     return (
         <>
             <h1>Ofertas de la semana</h1>
             <section className="ofertas-block">
                 {listaJuegos.length >0 ? listaJuegos.map(function(element){
-                        console.log(element);
                         <ItemContainer juego={element.juego}/>
-                    }): console.log("falso")
+                    }): false
                 }
                 {/*
                 <ItemContainer juego={juego1}/>

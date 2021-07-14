@@ -1,5 +1,4 @@
 import React from 'react';
-import ItemContainer from '../itemListContainer/itemListContainer';
 import OfertasBlock from '../OfertasContainer/OfertasBlock';
 
 const Body = () =>{

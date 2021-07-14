@@ -1,8 +1,11 @@
-import React from 'react';
-import ItemContainer from '../itemListContainer/itemListContainer';
-import haloImg from '../images/halo-infinite.jpg';
+import { element, func } from 'prop-types';
+import React, {useEffect, useState} from 'react';
+import ItemContainer from '../itemListContainer/ItemListContainer';
 
 const OfertasBlock = () =>{
+
+    const [listaJuegos,setListaJuegos] = useState([]);
+    const [flagCargaSv, setFlagCargaSV] = useState(0);
 
     class Juego{
         constructor(nombre, urlImagen, precio, stock){
@@ -17,16 +20,48 @@ const OfertasBlock = () =>{
     let juego3 = new Juego("Sea of Thieves", "" ,1400,0);
     let juego4 = new Juego("Portal II", "" ,600,2);
     let juego5 = new Juego("Red Dead Redemption II", "" ,1900,10);
-    
-    let listaJuegos = [juego1, juego2, juego3, juego4, juego5];
 
-    console.log(listaJuegos);
+    const setearObjetoJuegoOfertas =(juego1, juego2, juego3, juego4, juego5)=>{
+        return [{"juego":juego1},{"juego":juego2},{"juego":juego3},{"juego":juego4},{"juego":juego5}]
+    }
+    //simulando una carga de datos del servidor
+    const obtenerJuegosDelServidor = () =>{
+        setTimeout(()=>{
+            setListaJuegos(setearObjetoJuegoOfertas(juego1,juego2,juego3,juego4,juego5));
+        },2000);
+    }
+
+    useEffect(()=>{
+            //console.log("useEffect")
+            if (flagCargaSv==0){
+                //console.log("entro por primera vez y setteo eso");
+                obtenerJuegosDelServidor();
+                setFlagCargaSV(1);
+            }        
+        } 
+    );
+
+    //console.log(listaJuegos);
+
+    //{listaJuegos.length >0 ? listaJuegos.map(element => <ItemContainer juego={element}/>):false}
 
     return (
         <>
             <h1>Ofertas de la semana</h1>
             <section className="ofertas-block">
-                {listaJuegos.map(element => <ItemContainer juego={element}/>)}
+                {listaJuegos.length >0 ? listaJuegos.map(function(element){
+                        console.log(element);
+                        <ItemContainer juego={element.juego}/>
+                    }): console.log("falso")
+                }
+                {/*
+                <ItemContainer juego={juego1}/>
+                <ItemContainer juego={juego2}/>
+                <ItemContainer juego={juego3}/>
+                <ItemContainer juego={juego4}/>
+                <ItemContainer juego={juego5}/>
+                */}
+                
             </section>
         </>
     );

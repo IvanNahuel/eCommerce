@@ -38,34 +38,48 @@ const OfertasBlock = () =>{
         ]
     };
 
-    const [listaJuegos,setListaJuegos] = useState(juego);
+    const [listaJuegos,setListaJuegos] = useState({juegos:[]});
+    const [flagTimeOut, setFlagTimeOut] = useState(true);
 
-    //simulando una carga de datos del servidor
-    /*
-    const obtenerJuegosDelServidor = () =>{
-        setTimeout(()=>{
-            setListaJuegos();
-            console.log(listaJuegos.length)
-        },2000);
-    }
-    */
+    const CargarJuego = new Promise((resolve)=>{
+        resolve();
+    });
+
+    useEffect(()=>{
+        if(flagTimeOut){
+            setTimeout(()=>{
+                CargarJuego.then(()=>{
+                    setListaJuegos(juego);
+                });
+            },2000)
+            setFlagTimeOut(false);
+        }
+    });
+
+
+
 
     return (
         <>
             <h1>Ofertas de la semana</h1>
             <section className="ofertas-block">
-                {console.log(listaJuegos.juegos)}
-                {listaJuegos.juegos.length >0 ? listaJuegos.juegos.map(elemento =>{
+                
+
+                {
+                    listaJuegos&&listaJuegos.juegos.length >0 ? listaJuegos.juegos.map(elemento => <ItemContainer juego={elemento}/>): false
+                }
+
+                {/*listaJuegos.juegos.length >0 ? listaJuegos.juegos.map(elemento =>{
                     console.log(elemento);
                     <ItemContainer juego={elemento}/>
                 }): console.log("falso")
-                }
+                */}
                 {/*
                 <ItemContainer juego={juego.juegos[0]}/>
-                <ItemContainer juego={juego.juegos[0]}/>
-                <ItemContainer juego={juego.juegos[0]}/>
-                <ItemContainer juego={juego.juegos[0]}/>
-                <ItemContainer juego={juego.juegos[0]}/>
+                <ItemContainer juego={juego.juegos[1]}/>
+                <ItemContainer juego={juego.juegos[2]}/>
+                <ItemContainer juego={juego.juegos[3]}/>
+                <ItemContainer juego={juego.juegos[4]}/>
                 */}
                 
             </section>

@@ -55,10 +55,10 @@ const OfertasBlock = () =>{
             <h1>Ofertas de la semana</h1>
             <section className="ofertas-block">
                 {console.log(listaJuegos.juegos)}
-                {listaJuegos.juegos.length >0 ? listaJuegos.juegos.map(function(element){
-                        console.log(element);
-                        <ItemContainer juego={element}/>
-                    }): console.log("falso")
+                {listaJuegos.juegos.length >0 ? listaJuegos.juegos.map(elemento =>{
+                    console.log(elemento);
+                    <ItemContainer juego={elemento}/>
+                }): console.log("falso")
                 }
                 {/*
                 <ItemContainer juego={juego.juegos[0]}/>

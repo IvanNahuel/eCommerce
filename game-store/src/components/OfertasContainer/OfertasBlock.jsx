@@ -67,21 +67,7 @@ const OfertasBlock = () =>{
 
                 {
                     listaJuegos&&listaJuegos.juegos.length >0 ? listaJuegos.juegos.map(elemento => <ItemContainer juego={elemento}/>): false
-                }
-
-                {/*listaJuegos.juegos.length >0 ? listaJuegos.juegos.map(elemento =>{
-                    console.log(elemento);
-                    <ItemContainer juego={elemento}/>
-                }): console.log("falso")
-                */}
-                {/*
-                <ItemContainer juego={juego.juegos[0]}/>
-                <ItemContainer juego={juego.juegos[1]}/>
-                <ItemContainer juego={juego.juegos[2]}/>
-                <ItemContainer juego={juego.juegos[3]}/>
-                <ItemContainer juego={juego.juegos[4]}/>
-                */}
-                
+                }                
             </section>
         </>
     );

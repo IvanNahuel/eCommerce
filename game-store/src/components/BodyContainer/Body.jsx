@@ -1,5 +1,5 @@
 import React from 'react';
-import OfertasBlock from '../OfertasContainer/OfertasBlock';
+import OfertasBlock from '../ItemListContainer/ItemListContainer';
 
 const Body = () =>{
     return (

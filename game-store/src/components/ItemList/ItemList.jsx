@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Item from '../Item/Item';
+import Item from '../Item/Item.jsx';
 
 const OfertasBlock = () =>{
 
@@ -71,11 +71,8 @@ const OfertasBlock = () =>{
             <h1>Ofertas de la semana</h1>
             <section className="ofertas-block">
                 {
-                    listaJuegos&&listaJuegos.juegos.length >0 ? listaJuegos.juegos.map(elemento => {
-                        return(                        
+                    listaJuegos&&listaJuegos.juegos.length >0 ? listaJuegos.juegos.map(elemento =>               
                             <Item juego={elemento}/>                        
-                        )
-                    }
                     ): false
                 }                
             </section>

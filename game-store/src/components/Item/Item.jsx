@@ -7,7 +7,7 @@ const ItemContainer = (juego) =>{
             <div className="img-container">
                 <img src={juego.juego.urlImagen} alt={juego.juego.nombre}/> 
             </div>  
-            <Contador juego={juego}/>
+            {/*<Contador juego={juego}/>*/}
         </div>
     );
 }

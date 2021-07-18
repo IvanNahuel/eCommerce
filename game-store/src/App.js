@@ -17,7 +17,7 @@ function App() {
               <ItemListContainer/>
             </Route>
 
-            <Route path="/juegos/:id">
+            <Route path="/juego/:id">
               {/*de alguna manera le tenemos que pasar el id del item clickeado */}
               <ItemDetailContainer/>
             </Route>

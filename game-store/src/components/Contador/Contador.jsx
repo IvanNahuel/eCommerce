@@ -4,7 +4,7 @@ const Contador = ({juego}) =>{
     const [contador, SetTotal] = useState(0);
 
     const Aumentar = () =>{
-        if (juego.juego.stock > contador){
+        if (juego.stock > contador){
             SetTotal(contador+1);
         }
     };

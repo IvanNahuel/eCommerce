@@ -6,30 +6,35 @@ const OfertasBlock = () =>{
     let juego = {
         juegos:[
             { 
+                id: 0,
                 nombre: "Halo Infinite",
                 urlImagen: "./images/halo-infinite.jpg",
                 precio: 500,
                 stock: 5,
             },
             { 
+                id: 1,
                 nombre: "Call of duty Black Ops II",
                 urlImagen: "./images/cod-Black-ops-ii.jpg",
                 precio: 1600,
                 stock: 3,
             },
             { 
+                id: 2,
                 nombre: "Sea of Thieves",
                 urlImagen: "./images/sea-of-thieves.jpg",
                 precio: 1400,
                 stock: 0,
             },
             { 
+                id: 3,
                 nombre: "Portal II",
                 urlImagen: "./images/portal-II.jpg",
                 precio: 600,
                 stock: 2,
             },
             { 
+                id: 4,
                 nombre: "Red Dead Redemption II",
                 urlImagen: "./images/red-dead-redemption-II.jpg",
                 precio: 1900,

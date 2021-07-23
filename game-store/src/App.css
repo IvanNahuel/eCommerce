@@ -3,6 +3,10 @@
     font-family: roboto;
 }
 
+body{
+    background-color: #c1c1c1;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100;1,300;1,400&display=swap');
 
 .nav-bar{
@@ -77,11 +81,74 @@
     transform: scale(1.1);
 }
 
+.item-container{
+    background-color: red;
+    width: 90%;
+    height: 90%;
+}
 
-.ofertas-block > .item-container> .footer-item-juego {
-    width: 100%;
-    height: 20%;
+.item-details-container{
+    display: grid;
+    width: 50%;
+    height: 600px;
+    text-align: center;
+    margin: 20px 0 0 25%;
+    border-radius: 3px;
+    background-color: #F56C58;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 50% 25%;
+    grid-template-areas: 
+        "imagen h2"
+        "imagen h4"
+        "imagen descripcion";
+}
+
+.add-preview-out{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 100%;
     background-color: white;
+    user-select: none;
+    transition: 1s;
+    transform: scale(1.0); 
+}
+
+.add-preview-out:hover{
+    transition: 1s;
+    transform: scale(1.1); 
+}
+
+.add-preview-out.align-end{
+    justify-self: end;
+}
+
+.add-preview-out.align-start{
+    justify-self: start;
+}
+
+.item-details-container > h2{
+    margin: 0 40px;
+    align-self: center;
+}
+
+.item-details-container > h4{
+    margin: 0 40px;
+    align-self: center;
+}
+
+.img-item-details{
+    grid-area: imagen;
+}
+
+.img-item-details > img{
+    width: 100%;
+    height: 100%;
+}
+
+.item-details-container >.footer-item-juego{
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: 1fr 1fr;
@@ -91,22 +158,22 @@
     ;
     justify-items: center;
     align-items: center;
+    grid-area: descripcion;
 }
 
-.ofertas-block > .item-container> .footer-item-juego > .add-carrito{
+.add-carrito{
     grid-area: carrito;
-    width: 100%;
-}
-.ofertas-block > .item-container> .footer-item-juego > .add-preview-out{
-    justify-self: center;
-    height: 80%;
-}
-
-.item-container{
-    background-color: red;
-    width: 90%;
-    height: 90%;
+    width: 50%;
+    height: 50px;
+    line-height: 50px;
+    background-color: yellowgreen;
+    border-radius: 25px;
+    transition: 1s;
+    transform: scale(1.0);
 }
 
-
-
+.add-carrito:hover{
+    transition: 1s;
+    transform: scale(1.1);    
+    user-select: none;
+}

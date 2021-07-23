@@ -17,10 +17,10 @@ const Contador = ({juego}) =>{
 
     return (
         <div className="footer-item-juego">
-            <button className="add-preview-out"onClick={ Decrementar }>-</button>
-            <div className="add-preview-out">{contador}</div> 
-            <button className="add-preview-out" onClick={ Aumentar}>+</button>
-            <button className="add-carrito">Agregar al carrito</button>
+            <div className="add-preview-out align-end"onClick={ Decrementar }>-</div>
+            <div>{contador}</div> 
+            <div className="add-preview-out align-start" onClick={ Aumentar}>+</div>
+            <div className="add-carrito">Agregar al carrito</div>
         </div>   
     );
 }

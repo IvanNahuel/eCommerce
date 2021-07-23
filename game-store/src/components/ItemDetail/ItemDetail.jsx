@@ -6,11 +6,11 @@ const ItemDetail = ({juego}) =>{
 
 
     return (
-        <div className="item-details">
-            <h2>{juego.nombre}</h2>
+        <div className="item-details-container">
             <div className="img-item-details">
                 <img src={"."+juego.urlImagen} alt={juego.nombre}/> 
             </div>  
+            <h2>{juego.nombre}</h2>
             <h4>{juego.descripcion}</h4>
             <Contador juego={juego}/>
         </div>

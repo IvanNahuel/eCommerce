@@ -18,12 +18,13 @@ function App() {
             </Route>
 
             <Route path="/juego/:id">
-              {/*de alguna manera le tenemos que pasar el id del item clickeado */}
               <ItemDetailContainer/>
             </Route>
 
-          </Switch>
+            <Route path="/cart">
+            </Route>
 
+          </Switch>
         </div>
       </BrowserRouter>
   );

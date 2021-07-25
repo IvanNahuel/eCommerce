@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 
-const ItemContainer = (juego) =>{
-
-    console.log(juego);
+const ItemContainer = ({juego}) =>{
     return(
-        <Link to={'/juego/'+juego.juego.id.toString()} className="item-container">        
+        <Link to={'/juego/'+juego.id.toString()} className="item-container">        
             <div className="img-container">
-                <img src={juego.juego.urlImagen} alt={juego.juego.nombre}/> 
+                <img src={juego.urlImagen} alt={juego.nombre}/> 
             </div>  
         </Link>
     );

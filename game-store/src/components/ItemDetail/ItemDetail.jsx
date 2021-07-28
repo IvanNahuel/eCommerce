@@ -3,8 +3,6 @@ import Contador from '../Contador/Contador'
 import ConfirmarCompra from '../ConfirmarCompra/ConfirmarCompra';
 
 const ItemDetail = ({juego}) =>{
-    console.log(juego);
-
     const [contador, SetTotal] = useState(0);
     const [flagCompra, SetFlagCompra] = useState(false);
 
@@ -22,7 +20,7 @@ const ItemDetail = ({juego}) =>{
 
     const Comprar =()=>{
         if (contador > 0 ){
-                SetFlagCompra(true);
+            SetFlagCompra(true);
         }
     }
 
@@ -33,7 +31,7 @@ const ItemDetail = ({juego}) =>{
             </div>  
             <h2>{juego.nombre}</h2>
             <h4>{juego.descripcion}</h4>
-            {flagCompra? <ConfirmarCompra SetFlagCompra={SetFlagCompra}/> :<Contador contador={contador} Aumentar={Aumentar} Decrementar={Decrementar} Comprar={Comprar}/>}
+            {flagCompra? <ConfirmarCompra juego={juego} quantity={contador} SetFlagCompra={SetFlagCompra}/> :<Contador contador={contador} Aumentar={Aumentar} Decrementar={Decrementar} Comprar={Comprar}/>}
         </div>
     );
 };

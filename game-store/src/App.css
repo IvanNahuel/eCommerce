@@ -245,3 +245,16 @@ body{
     border-radius: 3px;
     background-color: #F56C58;
 }
+
+.icon-cart{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: #F56C58;
+    top: 0px;
+    right: 60px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}

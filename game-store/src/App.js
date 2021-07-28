@@ -3,12 +3,12 @@ import NavBar from './components/NavBar/NavBar';  //importamos nuestro component
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import { BrowserRouter, Switch, Rouse, Route } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-
-//<> son etiquetas vacias, o fragments por que el return solo retorna un solo objeto, en este caso, nos permite
-//crear nuestra etiqueta vacia y poner dentro nuestras etiquetas
+import { CartProvider } from './components/CartContext/CartContext';
 
 function App() {
   return (
+
+    <CartProvider>
       <BrowserRouter>
         <div className="App">
           <NavBar nombreDeLaTienda="Game store" />
@@ -27,6 +27,7 @@ function App() {
           </Switch>
         </div>
       </BrowserRouter>
+    </CartProvider>
   );
 }
 

@@ -1,9 +1,17 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import {CartContext} from '../CartContext/CartContext';
+import IconCart from "./IconCart/IconCart";
 
 const CartWidgets = () =>{
+
+    const {juegosCart} = useContext(CartContext);
+    console.log(juegosCart);
+
     return(
-        <img src="./images/shopping-cart.png" alt="carrito-compras" />
+        <div>
+            <img src="../images/shopping-cart.png" alt="carrito-compras" />
+            {juegosCart.length >0 && <IconCart cantidad={juegosCart.length}/>} 
+        </div>
     )
 }
 

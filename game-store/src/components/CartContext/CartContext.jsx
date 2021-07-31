@@ -17,7 +17,6 @@ export const CartProvider = ({children})=>{
 
     
     const isInCar = (juego) =>{
-        console.log("asd");
         return juegosCart.length>0? juegosCart.find(element => element.juego.id == juego.id) :false    //si existe es true, y si no es false
     }
 
@@ -26,7 +25,9 @@ export const CartProvider = ({children})=>{
     }
 
     const removeItem = (itemId) =>{
-
+        //le pasamos el id del juego y este buscara en toda la lista cual sera el que eliminara
+        const filtro = juegosCart.filter(element=> element.juego.id != itemId);
+        setJuegosCart(filtro);
     }
 
     const settearObjeto = (juego,quantity) =>{

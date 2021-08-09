@@ -27,7 +27,7 @@ const OfertasBlock = ({juego}) =>{
             <h1>Ofertas de la semana</h1>
             <section className="ofertas-block">            
                 {
-                    listaJuegos&&listaJuegos.juegos.length >0 ? listaJuegos.juegos.map(elemento => <Item juego={elemento}/>): false
+                    listaJuegos&&listaJuegos.juegos.length >0 ? listaJuegos.juegos.map(elemento => <Item juego={elemento} key={elemento.id}/>): false
                 }                
             </section>
         </>

@@ -21,7 +21,6 @@ const Body = () =>{
 
     useEffect(()=>{
         getJuegos();
-        console.log(listJuegos);
     },[]);
 
     let juego = {

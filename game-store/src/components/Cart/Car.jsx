@@ -12,9 +12,9 @@ const Cart = () =>{
     return (
         <div className="cart-container">
             {/*aca tenemos que mapear los items carts*/}            
-            {juegosCart.length >0 ? juegosCart.map( (element) => {
+            {juegosCart.length >0 ? juegosCart.map((element) => {
                 return(
-                    <ItemCart juego={element}/>
+                    <ItemCart juego={element} key={element.juego.id}/>
                 )
             })  : <h1>No hay juegos en la lista</h1>}
 

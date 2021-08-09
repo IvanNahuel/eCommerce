@@ -6,16 +6,6 @@ export const CartProvider = ({children})=>{
 
     const [juegosCart,setJuegosCart] =  useState([]);
 
-
-    //al clickear en comprar se debe guardar en este cartContext el producto y su cantidad en forma de objeto
-
-    //metodos
-    //addItem(item, queantity)          //agregar cierta cantidad de un item al carrito
-    //removeItem(itemId)                //Remover un item del cart usando el id
-    //clear()                           //remover todos los items
-    //isInCar()                         //true/false
-
-    
     const isInCar = (juego) =>{
         return juegosCart.length>0? juegosCart.find(element => element.juego.id == juego.id) :false    //si existe es true, y si no es false
     }
@@ -41,8 +31,6 @@ export const CartProvider = ({children})=>{
             alert("Ya tienes este objeto en tu carrito");
         }
     }
-
-    console.log(juegosCart);
 
     return(
         <CartContext.Provider value={{juegosCart,addItem,removeItem,clear}}>

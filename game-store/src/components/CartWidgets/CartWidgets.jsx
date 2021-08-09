@@ -5,7 +5,6 @@ import IconCart from "./IconCart/IconCart";
 const CartWidgets = () =>{
 
     const {juegosCart} = useContext(CartContext);
-    console.log(juegosCart);
 
     return(
         <div>

@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
 import OtrosJuegosList from '../OtrosJuegos/OtrosJuegos';
+import { database } from '../../firebase/firebase';
 
 const Body = () =>{
     //aca deberia estar la logica de lista
+    const [listJuegos,setListJuegos] = useState([]);   
+    
+    const getJuegos = () =>{
+        const juegos = database.collection('games');
+        juegos.get().then((requests)=>{
+            let auxListaJuego = [];
+            
+            requests.docs.forEach((element) =>{
+                auxListaJuego.push(element.data());
+            });
+            setListJuegos(auxListaJuego);            
+        });
+    }
+
+    useEffect(()=>{
+        getJuegos();
+        console.log(listJuegos);
+    },[]);
+
     let juego = {
         juegos:[
             { 
@@ -14,6 +34,7 @@ const Body = () =>{
                 categoria:"Mundo Abierto",
                 precio: 500,
                 stock: 5,
+                oferta: true,
             },
             { 
                 id: 1,
@@ -23,6 +44,7 @@ const Body = () =>{
                 categoria:"Disparos",
                 precio: 1600,
                 stock: 3,
+                oferta: true,
             },
             { 
                 id: 2,
@@ -32,6 +54,7 @@ const Body = () =>{
                 categoria:"Mundo Abierto",
                 precio: 1400,
                 stock: 0,
+                oferta: true,
             },
             { 
                 id: 3,
@@ -41,6 +64,7 @@ const Body = () =>{
                 categoria:"Disparos",
                 precio: 600,
                 stock: 2,
+                oferta: true,
             },
             { 
                 id: 4,
@@ -50,6 +74,7 @@ const Body = () =>{
                 categoria:"Mundo Abierto",
                 precio: 1900,
                 stock: 10,
+                oferta: true,
             }
         ],
         otrosJuegos:[
@@ -61,6 +86,7 @@ const Body = () =>{
                 categoria:"Estrategia",
                 precio: 1500,
                 stock: 1,
+                oferta: false,
             },
             {
                 id: 6,
@@ -70,6 +96,7 @@ const Body = () =>{
                 categoria:"Disparos",
                 precio: 1250,
                 stock: 20,
+                oferta: false,
             },
             {
                 id: 6,
@@ -79,6 +106,7 @@ const Body = () =>{
                 categoria:"Estrategia",
                 precio: 2700,
                 stock: 7,
+                oferta: false,
             },
             {
                 id: 7,
@@ -88,6 +116,7 @@ const Body = () =>{
                 categoria:"Mundo Abierto",
                 precio: 250,
                 stock: 9,
+                oferta: false,
             },
             {
                 id: 8,
@@ -97,6 +126,7 @@ const Body = () =>{
                 categoria:"Estrategia",
                 precio: 100,
                 stock: 4,
+                oferta: false,
             },
 
             {
@@ -107,6 +137,7 @@ const Body = () =>{
                 categoria:"Disparos",
                 precio: 1100,
                 stock: 5,
+                oferta: false,
             },
             {
                 id: 10,
@@ -116,6 +147,7 @@ const Body = () =>{
                 categoria:"Disparos",
                 precio: 2900,
                 stock: 15,
+                oferta: false,
             },
             {
                 id: 11,
@@ -125,6 +157,7 @@ const Body = () =>{
                 categoria:"Mundo Abierto",
                 precio: 5200,
                 stock: 15,
+                oferta: false,
             },
             {
                 id: 12,
@@ -134,6 +167,7 @@ const Body = () =>{
                 categoria:"Estrategia",
                 precio: 750,
                 stock: 15,
+                oferta: false,
             },
             {
                 id: 13,
@@ -143,6 +177,7 @@ const Body = () =>{
                 categoria:"Estrategia",
                 precio: 1370,
                 stock: 15,
+                oferta: false,
             }
         ]
     };

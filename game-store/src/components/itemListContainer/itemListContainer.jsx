@@ -98,7 +98,7 @@ const Body = () =>{
                 oferta: false,
             },
             {
-                id: 6,
+                id: 7,
                 nombre: "Skyrim",
                 descripcion:"The Elder Scrolls V: Skyrim es un videojuego de rol de acción del tipo mundo abierto desarrollado por Bethesda Game Studios y publicado por Bethesda Softworks.",
                 urlImagen: "./images/sky.jpg",
@@ -108,7 +108,7 @@ const Body = () =>{
                 oferta: false,
             },
             {
-                id: 7,
+                id: 8,
                 nombre: "Assasins Creed Rogue",
                 descripcion:"Assassin's Creed: Rogue es un videojuego de acción-aventura y sigilo de ficción histórica, desarrollado por Ubisoft Sofia y publicado por Ubisoft. Fue lanzado en Norteamérica el 11 de noviembre de 2014, en Australia el 13 de noviembre y para Europa el 14 de noviembre, para las consolas PlayStation 3, Xbox 360.",
                 urlImagen: "./images/acr.jpg",
@@ -118,7 +118,7 @@ const Body = () =>{
                 oferta: false,
             },
             {
-                id: 8,
+                id: 9,
                 nombre: "Tetris",
                 descripcion:"Tetris es un videojuego de lógica originalmente diseñado y programado por Alekséi Pázhitnov en la Unión Soviética. Fue lanzado el 6 de junio de 1984, ​ mientras trabajaba para el Centro de Computación Dorodnitsyn de la Academia de Ciencias de la Unión Soviética en Moscú, RSFS de Rusia.​",
                 urlImagen: "./images/tet.jpg",
@@ -129,7 +129,7 @@ const Body = () =>{
             },
 
             {
-                id: 9,
+                id: 10,
                 nombre: "Halo Reach",
                 descripcion:"Halo Reach es un videojuego de disparos en primera persona desarrollado por Bungie y publicado por Microsoft Game Studios para la consola Xbox 360 y posteriormente retrocompatible con Xbox One. Es el sexto videojuego de la saga Halo, así como su tercer videojuego Publicado.​",
                 urlImagen: "./images/hr.jpg",
@@ -139,7 +139,7 @@ const Body = () =>{
                 oferta: false,
             },
             {
-                id: 10,
+                id: 11,
                 nombre: "Killzone Shadow Fall",
                 descripcion:"Killzone: Shadow Fall es un videojuego de acción en primera persona, desarrollado por Guerrilla Games y publicado por Sony Computer Entertainment, es un título exclusivo de PlayStation 4. Es el sexto partido en toda la serie Killzone y el cuarto para consolas domésticas.",
                 urlImagen: "./images/kz.jpg",
@@ -149,7 +149,7 @@ const Body = () =>{
                 oferta: false,
             },
             {
-                id: 11,
+                id: 12,
                 nombre: "Zelda Breath of the Wild",
                 descripcion:"The Legend of Zelda: Breath of the Wild es un videojuego de acción-aventura de 2017 de la serie The Legend of Zelda, desarrollado por la filial Nintendo EPD en colaboración con Monolith Soft y publicado por Nintendo para las consolas Wii U y Nintendo Switch",
                 urlImagen: "./images/z.jpg",
@@ -159,7 +159,7 @@ const Body = () =>{
                 oferta: false,
             },
             {
-                id: 12,
+                id: 13,
                 nombre: "Goat Simulator",
                 descripcion:"Goat Simulator es un videojuego de acción en tercera persona, desarrollado y publicado por Coffee Stain Studios. Fue lanzado para Microsoft Windows vía Steam el 1 de abril de 2014, y para Mac OS X y Linux fueron lanzados el 27 de junio de 2014.",
                 urlImagen: "./images/gs.jpg",
@@ -169,7 +169,7 @@ const Body = () =>{
                 oferta: false,
             },
             {
-                id: 13,
+                id: 14,
                 nombre: "Assassin's Creed II",
                 descripcion:"Assassin's Creed II es un videojuego de acción-aventura de ficción histórica, desarrollado por Ubisoft Montreal. El juego llegó mundialmente a las tiendas el 17 de noviembre de 2009, y para el formato PAL Europeo el 19 del mismo mes, todo ello para consolas Xbox 360 y PlayStation 3.",
                 urlImagen: "./images/acII.jpg",

@@ -7,7 +7,7 @@ const OtrosJuegos = ({otrosJuegos}) =>{
             <h1>Los mas populares</h1>
             <section className="otros-juegos-grid">
                 {
-                otrosJuegos.map(element => <Item juego={element} key={element.id}/>) 
+                otrosJuegos.map(element => !element.oferta&&<Item juego={element} key={element.id}/>) 
                 }
             </section>
 

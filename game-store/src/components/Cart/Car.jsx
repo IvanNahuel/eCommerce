@@ -10,8 +10,7 @@ const Cart = () =>{
     },[juegosCart]);
 
     return (
-        <div className="cart-container">
-            {/*aca tenemos que mapear los items carts*/}            
+        <div className="cart-container">           
             {juegosCart.length >0 ? juegosCart.map((element) => {
                 return(
                     <ItemCart juego={element} key={element.juego.id}/>

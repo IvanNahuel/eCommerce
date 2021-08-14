@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import {CartContext} from '../CartContext/CartContext';
+import ListEmpty from '../ListEmpty/ListEmpty';
 import ItemCart from './ItemCart/ItemCart';
 
 const Cart = () =>{
@@ -15,7 +16,7 @@ const Cart = () =>{
                 return(
                     <ItemCart juego={element} key={element.juego.id}/>
                 )
-            })  : <h1>No hay juegos en la lista</h1>}
+            }):<ListEmpty/>}
 
         </div>
     );

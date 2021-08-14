@@ -269,20 +269,30 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.list-empty-container{
+    display: grid;
     background-color: #F56C58;
     height: 300px;
-    width:30%;
+    width: 25%;
     margin: 35px 35%;
     border-radius: 3px;
+    padding: 20px 35px;   
+    justify-content: center;
+    align-items: center;
 }
 
 .cart-container > .item-cart-container{
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 42% 58%;
-    width: 90%;
-    height: 90%;
-        
+    background-color: #F56C58;
+    height: 300px;
+    width: 25%;
+    margin: 35px 35%;
+    border-radius: 3px;
+    padding: 20px 35px;   
 }
 
 .item-cart-description-container{

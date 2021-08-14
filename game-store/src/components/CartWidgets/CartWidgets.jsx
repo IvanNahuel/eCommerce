@@ -8,7 +8,7 @@ const CartWidgets = () =>{
 
     return(
         <div>
-            <img src="../images/shopping-cart.png" alt="carrito-compras" />
+            <img src="../../images/shopping-cart.png" alt="carrito-compras" />
             {juegosCart.length >0 && <IconCart cantidad={juegosCart.length}/>} 
         </div>
     )

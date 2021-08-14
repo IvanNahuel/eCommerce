@@ -1,9 +1,8 @@
 import React, {useContext} from 'react';
 import {CartContext} from '../../CartContext/CartContext'
-
+import {Link} from 'react-router-dom';
 
 const ItemCart = ({juego}) =>{
-    console.log(juego);
     const {removeItem} = useContext(CartContext);
     
     const eliminar = ()=>{
@@ -26,8 +25,11 @@ const ItemCart = ({juego}) =>{
                     <hr></hr>
                 </section>
                 <section>
-                    <div onClick={eliminar}>Eliminar</div>
-                    <div onClick={()=>alert("Comprar")}>Comprar</div>
+                    <div className="cart-btn" onClick={eliminar}>Eliminar</div>
+                    <Link to={'/formularioOc/'+juego.juego.id}>
+                        <div className="cart-btn">Comprar</div>
+                    </Link>
+
                 </section>        
             </div>
         </div>

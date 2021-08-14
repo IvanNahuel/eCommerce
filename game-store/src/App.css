@@ -3,6 +3,11 @@
     font-family: roboto;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 body{
     background-color: #c1c1c1;
 }
@@ -328,7 +333,7 @@ body{
     justify-items: center;
 }
 
-.item-cart-description-container > section:nth-child(3n) > div{
+.cart-btn{
     width: fit-content;
     height: fit-content;
     padding: 10px 20px;
@@ -338,16 +343,102 @@ body{
     user-select: none;
 }
 
-.item-cart-description-container > section:nth-child(3n) > div:hover{
+.cart-btn:hover{
     transition: 1s;
     transform: scale(1.1);
-    
+}
+
+.item-cart-description-container > section:nth-child(3n) > a{
+    text-decoration: none;
+    color: black;
 }
 
 .item-cart-description-container > section:nth-child(3n) > div:nth-child(1n){
     background: #00b8ff;
 }
 
-.item-cart-description-container > section:nth-child(3n) > div:nth-child(2n){
+.item-cart-description-container > section:nth-child(3n) > a > div{
     background: #b8e503;
+}
+
+.formulario-oc{
+    width: 50%;
+    height: 600px;
+    margin: 25px 25%;
+    background-color: #F56C58;
+    display: grid;
+    grid-template-rows: 20% 40% 40%;
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.formulario-oc > h2{
+    align-self: center;
+}
+
+.formulario-oc > div{
+    align-self: start;
+}
+
+.formulario-flex-container > label{
+    margin: 10px 0;
+}
+
+.formulario-flex-container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border-radius: 3px;
+    height: max-content;
+    align-self: baseline;
+}
+
+.resumen-oc{
+    display: grid;
+    height: 240px;
+    width: 300px;
+    justify-content: center;
+    grid-template-columns: 100%;
+}
+
+.resumen-oc > div{
+    justify-self: center;
+}
+
+.btn-acciones{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+}
+
+.btn-acciones > a{
+    width: fit-content;
+    height: fit-content;
+}
+
+.cancelar{
+    background-color: lightseagreen;
+    transform: scale(1.0);
+    transition: 1s;
+}
+
+.cancelar:hover{
+    background-color: lightseagreen;
+    transition: 1s;
+    transform: scale(1.1);
+    border: 1px solid gray;
+}
+
+.comprar{
+    background: #b8e503;
+    transform: scale(1.0);
+    transition: 1s;
+}
+
+.comprar:hover{
+    background: #b8e503;
+    transform: scale(1.1);
+    transition: 1s;
+    border: 1px solid gray;
 }

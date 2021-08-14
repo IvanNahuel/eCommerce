@@ -24,8 +24,6 @@ const ItemDetail = ({juego}) =>{
         }
     }
 
-    console.log(juego);
-
     return (
         <div className="item-details-container">
             <div className="img-item-details">

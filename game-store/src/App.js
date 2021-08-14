@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './components/CartContext/CartContext';
 import Cart from './components/Cart/Car';
+import FormularioOc from './components/FormularioOc/FormularioOc';
 
 function App() {
   return (
@@ -24,6 +25,14 @@ function App() {
 
             <Route path="/cart">
               <Cart/>
+            </Route>
+
+            <Route path="/formularioOc/:id">
+              <FormularioOc/>
+            </Route>
+
+            <Route path="/compra/:idCompra">
+              {/*hacer una card, que te muestre tu compra y con el ID de compra*/}
             </Route>
 
           </Switch>

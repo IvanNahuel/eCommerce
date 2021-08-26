@@ -27,7 +27,7 @@ function App() {
               <Cart/>
             </Route>
 
-            <Route path="/formularioOc/:id">
+            <Route path="/formularioOc">
               <FormularioOc/>
             </Route>
 

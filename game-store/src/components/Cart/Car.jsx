@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import {CartContext} from '../CartContext/CartContext';
 import ListEmpty from '../ListEmpty/ListEmpty';
 import ItemCart from './ItemCart/ItemCart';
+import ComprarJuegosContainer from './ComprarContainer/ComprarContainer';
 
 const Cart = () =>{
     const {juegosCart} = useContext(CartContext)
@@ -16,8 +17,9 @@ const Cart = () =>{
                 return(
                     <ItemCart juego={element} key={element.juego.id}/>
                 )
-            }):<ListEmpty/>}
-
+            })
+            :<ListEmpty/>}
+            {juegosCart.length >0  &&  <ComprarJuegosContainer/> }
         </div>
     );
 }

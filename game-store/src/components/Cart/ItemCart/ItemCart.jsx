@@ -26,10 +26,6 @@ const ItemCart = ({juego}) =>{
                 </section>
                 <section>
                     <div className="cart-btn" onClick={eliminar}>Eliminar</div>
-                    <Link to={'/formularioOc/'+juego.juego.id}>
-                        <div className="cart-btn">Comprar</div>
-                    </Link>
-
                 </section>        
             </div>
         </div>

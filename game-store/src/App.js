@@ -35,11 +35,6 @@ function App() {
             <Route path="/categoria/:categoria">
               <Categoria/>
             </Route>
-
-            <Route path="/compra/:idCompra">
-              {/*hacer una card, que te muestre tu compra y con el ID de compra*/}
-            </Route>
-
           </Switch>
         </div>
       </BrowserRouter>

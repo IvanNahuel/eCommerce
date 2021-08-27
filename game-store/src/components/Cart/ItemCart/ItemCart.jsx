@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 import {CartContext} from '../../CartContext/CartContext'
-import {Link} from 'react-router-dom';
 
 const ItemCart = ({juego}) =>{
     const {removeItem} = useContext(CartContext);
@@ -9,13 +8,9 @@ const ItemCart = ({juego}) =>{
         removeItem(juego.juego.id);
     }
 
-    const comprar= ()=>{
-        return false;
-    }
-
     return (
         <div className="item-cart-container">
-            <img src={juego.juego.urlImagen} ></img>
+            <img src={juego.juego.urlImagen} alt={juego.juego.nombre}></img>
             <div className="item-cart-description-container">
                 <section>
                     <h1>{juego.juego.nombre}</h1>

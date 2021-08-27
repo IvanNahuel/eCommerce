@@ -1,10 +1,10 @@
-import React, { createContext, useContext } from 'react';
+import React, { useContext } from 'react';
 import {Link} from 'react-router-dom';
 import {CartContext} from '../CartContext/CartContext';
 
 const ConfirmarCompra = ({juego,quantity,SetFlagCompra}) =>{
 
-    const {juegosCart,addItem,removeItem,clear} = useContext(CartContext);
+    const {addItem} = useContext(CartContext);
 
     const modificar = () =>{
         SetFlagCompra(false);

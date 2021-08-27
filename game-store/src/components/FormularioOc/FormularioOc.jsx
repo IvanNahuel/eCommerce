@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import {CartContext} from '../CartContext/CartContext';
 import { database } from '../../firebase/firebase';
@@ -48,7 +48,7 @@ const FormularioOc = () =>{
         let telefono = document.getElementById("telefono").value;
         let email = document.getElementById("email").value;
 
-        if (nombre != "" && telefono != "" && email != ""){
+        if (nombre !== "" && telefono !== "" && email !== ""){
             añadirJuego(nombre,telefono,email);
         }
     }

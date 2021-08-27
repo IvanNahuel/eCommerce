@@ -8,29 +8,23 @@ const ItemDetailContainer = () =>{
     //aca recibe el useParams, y en base a ese useParams, nosotros trateremos de buscar en el array de objetos
     //nuestro objeto
     const {id} = useParams();
-    const [listaJuegos,setListaJuego] = useState();
     const [itemJuego,setItemJuego] = useState();
 
-    const getJuegos = () =>{
-        const juegos = database.collection('games');
-        juegos.get().then((requests)=>{
-            let auxListaJuego = [];
-            
-            requests.docs.forEach((element) =>{
-                auxListaJuego.push({ ...element.data(), id: element.id});
-            });  
-            var aux = auxListaJuego.find(element => element.id ==id)
-            setItemJuego(aux);        
-        });
-    }
-
-    const getItems = () =>{
-        var aux = listaJuegos.find(element => element.id ==id)
-        setItemJuego(aux);
-    }
-
     useEffect(()=>{
+        const getJuegos = () =>{
+            const juegos = database.collection('games');
+            juegos.get().then((requests)=>{
+                let auxListaJuego = [];
+                
+                requests.docs.forEach((element) =>{
+                    auxListaJuego.push({ ...element.data(), id: element.id});
+                });  
+                var aux = auxListaJuego.find(element => element.id === id)
+                setItemJuego(aux);        
+            });
+        }
         getJuegos();
+        // eslint-disable-next-line
     },[]);
 
     return itemJuego?<ItemDetail juego={itemJuego}/>:false;

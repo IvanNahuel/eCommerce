@@ -6,6 +6,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { CartProvider } from './components/CartContext/CartContext';
 import Cart from './components/Cart/Car';
 import FormularioOc from './components/FormularioOc/FormularioOc';
+import Categoria from './components/Categoria/Categoria';
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
 
             <Route path="/formularioOc">
               <FormularioOc/>
+            </Route>
+
+            <Route path="/categoria/:categoria">
+              <Categoria/>
             </Route>
 
             <Route path="/compra/:idCompra">

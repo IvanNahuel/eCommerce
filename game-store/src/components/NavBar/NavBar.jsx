@@ -9,10 +9,18 @@ const NavBar = (props) =>{
                 <h1>{props.nombreDeLaTienda}</h1>
             </Link>
             <section>
+                <Link to={'/categoria/Mundo Abierto'} className="anchor-container">    
                     <div>Mundo Abierto</div>
+                </Link>
+                <Link to={'/categoria/Disparos'} className="anchor-container"> 
                     <div>Disparos</div>
+                </Link>
+                <Link to={'/categoria/Estrategia'} className="anchor-container"> 
                     <div>Estrategia</div>
+                </Link>
+                <Link to={'/cart'} className="anchor-container">        
                     <CartWidgets/>
+                </Link>
             </section>
         </nav>
     );

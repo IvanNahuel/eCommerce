@@ -451,3 +451,20 @@ body{
     transition: 1s;
     border: 1px solid gray;
 }
+
+.anchor-container{
+    height: fit-content;
+    align-self: center;
+    width: fit-content;
+}
+
+.item-categoria-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 35px 25%;
+    grid-template-rows: 300px;
+    justify-items: center;
+    align-items: center;
+    border-radius: 3px;
+    background-color: #F56C58;
+}

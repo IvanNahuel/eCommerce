@@ -4,7 +4,6 @@ import OtrosJuegosList from '../OtrosJuegos/OtrosJuegos';
 import { database } from '../../firebase/firebase';
 
 const Body = () =>{
-    //aca deberia estar la logica de lista
     const [listJuegos,setListJuegos] = useState([]);
        
     const getJuegos = () =>{

@@ -1,6 +1,6 @@
 import './App.css';
-import NavBar from './components/NavBar/NavBar';  //importamos nuestro componente creado previamente
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import NavBar from './components/NavBar/NavBar';  
+import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './components/CartContext/CartContext';
